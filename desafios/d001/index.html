@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 001</title>
+    <style>
+        *{
+            font-family: sans-serif;
+            font-weight: bold;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body{
+            position: relative;
+
+            background-color: rgb(147, 181, 192);
+        }
+
+        h1{
+            color: lightgreen;
+            padding: 5%;
+            text-align: center;
+        }
+
+        section{
+            position: absolute;
+            left: 50%;
+            top: 50vh;
+            transform: translate(-50%, -25vh);
+        }
+
+        button{
+            margin-top: 35%;
+            width: 100px;
+            height: 100px;
+            border-radius: 20px;
+            background-color: white;
+            border: 3px solid black;
+        }
+
+        #bhtml:hover{
+            background-color: rgb(247, 115, 67);
+        }
+
+        #bcss:hover{
+            background-color: lightskyblue;
+        }
+
+        #bjs:hover{
+            background-color: yellow;
+        }
+
+        .banim:hover{
+            cursor: pointer;
+            color: lightgoldenrodyellow;
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.808);
+            box-shadow: 4px 4px 6px rgba(255, 255, 255, 0.74);
+            transition: transform, 700ms;
+            transform: rotate(-10deg);
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Clique em um dos botões abaixo</h1>
+    <section>
+        <button onclick="myFunction()" id="bhtml" class="banim" type="button">HTML</button>
+        <button onclick="myFunction()" id="bcss" class="banim" type="button">CSS</button>
+        <button onclick="myFunction()" id="bjs" class="banim" type="button">JAVASCRIPT</button>
+    </section>
+
+    <script>
+        function myFunction(){
+
+            var bhtml = window.alert('Esse é o botão de HTML')
+        }
+    </script>
+</body>
+</html>
