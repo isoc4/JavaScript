@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Primeiro Script</title>
+    <style>
+        body{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: cadetblue;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+
+        strong{
+            color: lightgreen;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <script>
+        var nome = window.prompt('Qual seu nome?:')
+
+        document.write(`<strong>${nome}</strong>, seu nome é composto por ${nome.length} letras.<br><hr>`)
+
+        document.write(`Seu nome em maiúsculas é <strong>${nome.toUpperCase()}</strong><br><hr>`)
+
+        document.write(`Seu nome em minusculas é <strong>${nome.toLowerCase()}</strong><br><hr>`)
+    </script>
+</body>
+</html>
