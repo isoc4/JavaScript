@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Events</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        #blaranja{
+            margin: auto;
+            background-color: peru;
+            color: khaki;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+
+        #bverde{
+            margin: auto;
+            background-color: greenyellow;
+            color: purple;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+
+        #bazul{
+            margin: auto;
+            background-color: lightsteelblue;
+            color: khaki;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="blaranja">
+        <p>Clique Aqui</p>
+    </div>
+    <script>
+        var bl = window.document.getElementById('blaranja')
+        bl.addEventListener('click', clicar)
+        bl.addEventListener('mouseenter', hover)
+        bl.addEventListener('mouseout', saiu)
+
+        function clicar(){
+
+            bl.innerText = 'Clicou'
+            bl.style.background = 'purple'
+
+        }
+
+        function hover(){
+            bl.innerText = 'Mouse Dentro'
+            bl.style.background = 'lightskyblue'
+        }
+
+        function saiu(){
+            bl.innerText = 'Mouse Fora'
+            bl.style.background = 'lightcoral'
+        }
+    </script>
+</body>
+</html>
