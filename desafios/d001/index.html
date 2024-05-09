@@ -66,17 +66,28 @@
 <body>
     <h1>Clique em um dos botões abaixo</h1>
     <section>
-        <button onclick="myFunction()" id="bhtml" class="banim" type="button">HTML</button>
-        <button onclick="myFunction()" id="bcss" class="banim" type="button">CSS</button>
-        <button onclick="myFunction()" id="bjs" class="banim" type="button">JAVASCRIPT</button>
+        <button onclick="clickhtml()" id="bhtml" class="banim" type="button">HTML</button>
+        <button onclick="clickcss()" id="bcss" class="banim" type="button">CSS</button>
+        <button onclick="clickjs()" id="bjs" class="banim" type="button">JAVASCRIPT</button>
     </section>
 
     <script>
-        function myFunction(){
-
-            document.getElementById("bhtml")
-            window.alert("YOU CLICKED ME!")
+        
+        function clickhtml(){
+            var html = window.document.getElementById('bhtml')
+            window.alert('botão de HTML')
         }
+
+        function clickcss(){
+            var css = window.document.getElementById('bcss')
+            window.alert('botão de CSS')
+        }
+
+        function clickjs(){
+            var js = window.document.getElementById('bjs')
+            window.alert('botão de JavaScript')
+        }
+
     </script>
 </body>
 </html>
