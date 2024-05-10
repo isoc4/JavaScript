@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAM</title>
+    <style>
+        #invel{
+            width: 40px;
+            text-align: center;
+        }
+
+        #js{
+            background-color: peachpuff;
+            color: royalblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    <h3>Velocidade Max: 60 KM/h</h3>
+    <p>Velocidade do carro <input type="number" name="nvel" id="invel"> KM/h</p>
+    <input type="submit" value="Verificar" onclick="calcularvel()">
+    <p id="res">
+
+    </p>
+
+    <script>
+        function calcularvel(){
+            var nv = window.document.getElementById('invel')
+            var res = window.document.getElementById('res')
+            var vel = Number(nv.value)
+            res.innerHTML = `<p id="js">Sua velocidade atual é ${vel}KM/h</p>`
+            if (vel > 60){
+                res.innerHTML += '<p>Você levou uma MULTA por dirijir em uma velocidade maior que 60KM/h</p>'
+            }
+            res.innerHTML += `<p>Dirija sempre com cinto de segurança...</p>`
+        }
+
+    </script>
+</body>
+</html>

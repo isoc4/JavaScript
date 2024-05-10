@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Localidade</title>
+    <style>
+        #pais{
+            width: 130px;
+        }
+
+        #resultado{
+            background-image: linear-gradient(to right, red, orange, yellow, green, lightblue, blue, purple);
+            color: white;
+            width: 60%;
+            padding: 1%;
+        }
+
+        strong{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Qual seu país?</h1>
+    <h2>Eu moro na(o): </h2>
+    <p style="color: red;">(Escreva com a primeira letra sendo maiúscula)</p>
+    <input type="text" name="pais" id="pais">
+    <input type="button" value="Enviar" onclick="enviar()">
+    <div id="respais"></div>
+    
+    <script>
+        function enviar(){
+            var p = window.document.getElementById('pais')
+            var pstring = String(p.value)
+            var res = window.document.getElementById('respais')
+            if (pstring != 'Brasil') {
+                res.innerHTML = `<p id="resultado">Você é gringo! Você é lá da(o) <strong>${pstring}</strong></p>`
+            } else {
+                res.innerHTML = '<p id="resultado">Você é brasileiro! É aqui do <strong>Brasil</strong></p>'
+            }
+        }
+    </script>
+</body>
+</html>
