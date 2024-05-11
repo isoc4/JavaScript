@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperaturas</title>
+    <style>
+        button{
+            background-color: white;
+            width: 200px;
+            height: 90px;
+        }
+
+        button:hover{
+            cursor: pointer;
+            background-color: rgba(0, 119, 255, 0.164);
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversos de Temperaturas</h1>
+    <button type="button" onclick="caltemp()">Converter</button>
+    <h2 id="th2"></h2>
+    <p id="pklv"></p>
+    <p id="pfrh"></p>
+
+    <script>
+        function caltemp(){
+            var c1 = Number(window.prompt("Digite uma temperatura em ℃ (Celsius)")).replace(',','.')
+            var k1 = c1 + 273.15
+            var f1 = ((c1 * 9) / 5) + 32
+
+            var h2 = window.document.getElementById("th2")
+            var k = window.document.getElementsById("pklv")
+            var f = window.document.getElementById("pfrh")
+            
+            c1 = c1.toFixed(2);
+            f1 = f1.toFixed(2);
+            k1 = k1.toFixed(2);
+
+            h2.innerHTML = (`A temperatura de ${c1}℃ corresponde a:`)
+            k.innerHTML = (`${k1}°K (Kelvin)`)
+            f.innerHTML = (`${f1}°F (Fahrenheit)`)
+        }
+    </script>
+</body>
+</html>
