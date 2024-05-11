@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja</title>
+    <style>
+        body{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            position: relative;
+            background-color: rgb(29, 37, 53);
+            color: white;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        button{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, 90%);
+
+            width: 200px;
+            height: 70px;
+            font-weight: bold;
+            background-color: lightgoldenrodyellow;
+            border: 3px solid rgb(104, 131, 185);
+            color: plum;
+        }
+
+        button:hover{
+            background-color: plum;
+            color: lightgoldenrodyellow;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calcular Troco</h1>
+    <button type="button" onclick="calcular()">Calcular</button>
+
+    <script>
+        function calcular(){
+            var produ = window.prompt('Qual o produto que será comprado?')
+            var custo = window.prompt(`Quanto custa o(a) ${produ}?`)
+            var quadin = window.prompt(`Qual o valor que você deu para a compra do(a) ${produ}`)
+            var cal = quadin - custo
+            window.alert(`O(a) ${produ} custou R$ ${custo}.
+
+Você deu R$ ${quadin} em dinheiro, e vai receber de troco R$ ${cal}.
+
+Volte Sempre!`)
+        }
+    </script>
+</body>
+</html>
