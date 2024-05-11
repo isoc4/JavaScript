@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor</title>
+    <style>
+        body{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            background-color: rgb(29, 37, 53);
+            color: white;
+        }
+
+        button{
+            width: 200px;
+            height: 70px;
+            font-weight: bold;
+            background-color: lightgoldenrodyellow;
+            border: 3px solid rgb(104, 131, 185);
+            color: plum;
+        }
+
+        button:hover{
+            background-color: plum;
+            color: lightgoldenrodyellow;
+            cursor: pointer;
+        }
+
+        p{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor de Medidas</h1>
+    <button type="button" onclick="converter()">Converter</button>
+    <h2 id="th2"></h2>
+    <p id="pkm"></p>
+    <p id="phm"></p>
+    <p id="pdam"></p>
+    <p id="pdm"></p>
+    <p id="pcm"></p>
+    <p id="pmm"></p>
+
+    <script>
+        function converter() {
+            var dis = window.prompt('Digite a distância em metros (m)').replace(',','.')
+
+            var km1 = (dis / 1000).toLocaleString('pt-br', {minimumFractionDigits: 0, maximumFractionDigits: 3})
+
+            var hm1 = (dis / 100).toLocaleString('pt-br', {minimumFractionDigits: 0, maximumFractionDigits: 3})
+
+            var dam1 = (dis / 10).toLocaleString('pt-br', {minimumFractionDigits: 0, maximumFractionDigits: 3})
+
+            var dm1 = (dis * 10).toLocaleString('pt-br', {minimumFractionDigits: 0, maximumFractionDigits: 3})
+
+            var cm1 = (dis * 100).toLocaleString('pt-br', {minimumFractionDigits: 0, maximumFractionDigits: 3})
+
+            var mm1 = (dis * 1000).toLocaleString('pt-br', {minimumFractionDigits: 0, maximumFractionDigits: 3})
+
+            var km = window.document.getElementById("pkm")
+            var hm = window.document.getElementById("phm")
+            var dam = window.document.getElementById("pdam")
+            var dm = window.document.getElementById("pdm")
+            var cm = window.document.getElementById("pcm")
+            var mm = window.document.getElementById("pmm")
+
+            var h2 = window.document.getElementById("th2")
+
+            h2.innerHTML = (`A distância de ${dis} metros corresponde a:`)
+            km.innerHTML = (`${km1} (Km)`)
+            hm.innerHTML = (`${hm1} (Hm)`)
+            dam.innerHTML = (`${dam1} (Dam)`)
+            dm.innerHTML = (`${dm1} (dm)`)
+            cm.innerHTML = (`${cm1} (cm)`)
+            mm.innerHTML = (`${mm1} (mm)`)
+            
+        }
+    </script>
+</body>
+</html>
