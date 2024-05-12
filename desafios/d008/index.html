@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desconto</title>
+    <style>
+        button{
+            width: 200px;
+            height: 90px;
+        }
+
+        button:hover{
+            cursor: pointer;
+            background-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calcular desconto</h1>
+
+    <button type="button" onclick="caldes()">Desconto: 10%</button>
+
+    <h1 id="th1"></h1>
+    <div id="resul"></div>
+
+    <script>
+        function caldes(){
+            var prod = window.prompt("Qual é o produto que será comprado?")
+            var pre = window.prompt(`Qual o preço de ${prod}?`)
+            var caldes = pre * 0.1
+            var des = pre - caldes
+
+            th1.innerHTML = `Calculando desconto de 10% para ${prod}`
+            resul.innerHTML = `<h3>O preço original é R$${pre}.</h3> <h3>Você acaba de ganhar R$${caldes} de desconto (-10%).</h3><strong>(Considere apenas os 2 números depois do ponto)</strong><h3>Você vai pagar R$${des} no produto ${prod}</h3>`
+        }
+    </script>
+</body>
+</html>
