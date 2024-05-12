@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor</title>
+    <style>
+        button{
+            width: 200px;
+            height: 90px;
+        }
+
+        button:hover{
+            cursor: pointer;
+            background-color: transparent;
+        }
+
+        #resul p{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor de R$ para U$</h1>
+    <button type="button" onclick="converter()">Converter</button>
+
+    <div id="resul"></div>
+
+    <script>
+        function converter(){
+            var real = window.prompt("Quantos R$ você tem na carteira?").replace(',','.')
+            var dolar = real * 5.16
+            var res = window.document.getElementById("resul")
+            resul.innerHTML = `<h2>${real}R$ em dolar é ${dolar}U$</h2><p>(Considere somente os 2 primeiros números depois da vírgula)</p>`
+        }
+    </script>
+</body>
+</html>
