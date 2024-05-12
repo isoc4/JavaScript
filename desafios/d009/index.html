@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salário</title>
+    <style>
+        body{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        button{
+            width: 200px;
+            height: 90px;
+        }
+
+        button:hover{
+            cursor: pointer;
+            background-color: transparent;
+        }
+
+        h2{
+            color: red;
+            font-size: 1em;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    <h1>Clique no botão para reajustar o salário</h1>
+    <button type="button" onclick="reasal()">Reajustar Salário</button>
+    <h2>(escreva o salário sem a virgula e o ponto)</h2>
+
+    <h1 id="th1"></h1>
+
+    <div id="resul">
+        
+    </div>
+
+    <script>
+        function reasal(){
+            var nome = window.prompt("Qual é o nome do funcionário?")
+            var salario = Number(window.prompt(`Qual é o salário de ${nome}`))
+            var porcentagem = window.prompt(`Digite o número da porcentagem do reajuste do salário de ${nome}.`)
+            var calaument = Number(salario * (porcentagem / 100))
+            var calsal = salario + calaument
+
+            th1.innerHTML = `${nome} recebeu um aumento salarial`
+            resul.innerHTML = `<p>O salário atual era de R$${salario}</p><p>Com um aumento de ${porcentagem}% o salário de ${nome} vai ter um aumento de R$${calaument} no próximo mês.</p><p>Então, ${nome} vai começar a receber R$${calsal}.<p>`
+        }
+    </script>
+</body>
+</html>
