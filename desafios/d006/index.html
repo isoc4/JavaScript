@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temperaturas</title>
     <style>
+        body{
+            height: 100vh;
+            background-image: linear-gradient(to right bottom, red, orange, yellow, green, lightblue, darkblue, purple);
+        }
+
+        h1{
+            color: royalblue;
+        }
+
         button{
             background-color: white;
             width: 200px;
@@ -13,34 +22,50 @@
 
         button:hover{
             cursor: pointer;
-            background-color: rgba(0, 119, 255, 0.164);
+            background-color: transparent;
+            border: 2.8px solid royalblue;
+        }
+
+        #resul p {
+            color: lightblue;
+            font-size: 1em;
+            font-weight: bold;
+        }
+
+        @media screen and (max-width: 768px){
+            body{
+                background-image: none;
+                background-color: rgb(49, 72, 114);
+            }
+
+            button:hover{
+                background-color: black;
+                color: white;
+            }
         }
     </style>
 </head>
 <body>
     <h1>Conversos de Temperaturas</h1>
     <button type="button" onclick="caltemp()">Converter</button>
-    <h2 id="th2"></h2>
-    <p id="pklv"></p>
-    <p id="pfrh"></p>
+
+    <div id="resul">
+        
+    </div>
 
     <script>
+        var res = window.document.getElementById("resul")
+
         function caltemp(){
-            var c1 = Number(window.prompt("Digite uma temperatura em ℃ (Celsius)")).replace(',','.')
-            var k1 = c1 + 273.15
-            var f1 = ((c1 * 9) / 5) + 32
+            res.innerHTML = ''
 
-            var h2 = window.document.getElementById("th2")
-            var k = window.document.getElementsById("pklv")
-            var f = window.document.getElementById("pfrh")
+            var c = Number(window.prompt('Digite uma temperatura em °C (Celsius)').replace(',','.'))
+            var k = c + 273.15
+            var f = ((c * 9) / 5) + 32
             
-            c1 = c1.toFixed(2);
-            f1 = f1.toFixed(2);
-            k1 = k1.toFixed(2);
-
-            h2.innerHTML = (`A temperatura de ${c1}℃ corresponde a:`)
-            k.innerHTML = (`${k1}°K (Kelvin)`)
-            f.innerHTML = (`${f1}°F (Fahrenheit)`)
+            res.innerHTML += `<h1>${c}°C, corresponde a:</h1>`
+            res.innerHTML += `<p>${k}°K (Kelvin)</p>`
+            res.innerHTML += `<p>${f}°F (Fahrenheit)</p>`
         }
     </script>
 </body>
