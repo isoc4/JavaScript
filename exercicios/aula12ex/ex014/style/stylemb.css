@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+header{
+    font-size: 3vw;
+}
+
+section{
+    width: 170px;
+    height: 175px;
+    padding: 5px;
+}
+
+footer{
+    font-size: 1.8vw;
+}
+
+#foto{
+    padding: 25px;
+}
+
+#foto img{
+    width: 96px;
+    height: 100px;
+    border-radius: 20px;
+}
