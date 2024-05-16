@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Exercício</title>
+    <link rel="stylesheet" href="style/styletg.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="style/style.css">
+</head>
+<body>
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+    <section>
+        <div id="formulario">
+            <div>
+                <label for="iano">Ano em que nasceu: </label>
+                <input type="number" name="ano" id="iano">
+            </div>
+            
+            <div>
+                Sexo:
+
+                <label for="imas">Masculino</label>
+                <input type="radio" name="sex" id="imas">
+
+                <label for="ifem">Feminino</label>
+                <input type="radio" name="sex" id="ifem">
+            </div>
+
+            <input type="submit" value="Verificar" onclick="verificar()">
+        </div>
+        <div id="res">
+            Preencha os dados para ver o resultado
+
+            <div>
+                <img id="imagem" src="" alt="">
+            </div>
+        </div>
+    </section>
+    <footer>
+        <h2>&copy; Curso em Vídeo (Isis Maria)</h2>
+    </footer>
+
+    <script src="scriptme.js"></script>
+</body>
+</html>

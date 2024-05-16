@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+header{
+    font-size: 1.8vw;
+}
+
+section{
+    width: 238px;
+    height: 400px;
+    font-size: 0.8em;
+}
+
+footer{
+    font-size: 0.5em;
+}
+
+#imagem{
+    margin-top: 20px;
+    width: 200px;
+    height: 200px;
+}
