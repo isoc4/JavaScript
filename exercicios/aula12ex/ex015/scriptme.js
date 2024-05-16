@@ -12,36 +12,41 @@ function verificar(){
         var idade = ano - Number(forano.value)
         var forsex = document.getElementsByName("sex")
         var genero = ''
-        var img = document.getElementById("imagem")
+        var img = document.createElement ('img')
+        img.setAttribute('id', 'imagem')
 
 
 
         if (forsex[0].checked){
             genero = 'homem'
             if (idade >= 0 && idade < 10){
-                img.src = 'imagem/crianca-h.jpg'
+                genero = 'menino'
+                img.setAttribute('src', 'imagem/crianca-h.jpg')
             } else if (idade >= 10 && idade < 19){
-                img.src = 'imagem/jovem-h.jpg'
+                genero = 'menino'
+                img.setAttribute('src', 'imagem/jovem-h.jpg')
             } else if (idade >= 19 && idade < 60){
-                img.src = 'imagem/adulto-h.jpg'
+                img.setAttribute('src', 'imagem/adulto-h.jpg')
             } else {
-                img.src = 'imagem/velho-h.jpg'
+                img.setAttribute('src', 'imagem/velho-h.jpg')
             }
         } else if (forsex[1].checked){
             genero = 'mulher'
             if (idade >= 0 && idade < 10){
-                img.src = 'imagem/crianca-m.jpg'
+                genero = 'menina'
+                img.setAttribute('src', 'imagem/crianca-m.jpg')
             } else if (idade >= 10 && idade < 19){
-                img.src = 'imagem/jovem-m.jpg'
+                genero = 'menina'
+                img.setAttribute('src', 'imagem/jovem-m.jpg')
             } else if (idade >= 19 && idade < 60){
-                img.src = 'imagem/adulto-m.jpg'
+                img.setAttribute('src', 'imagem/adulto-m.jpg')
             } else {
-                img.src = 'imagem/velho-m.jpg'
+                img.setAttribute('src', 'imagem/velho-m.jpg')
             }
         }
 
 
-        res.innerHTML = `Você é ${genero} e tem ${idade} anos!`
+        res.innerHTML = `Você é um(a) ${genero} e tem ${idade} anos!`
         res.appendChild(img)
     }
 }
