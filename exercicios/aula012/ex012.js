@@ -11,7 +11,7 @@ if (h < 6) {
     console.log('Boa noite!')
 }
 
-/* Para Mostrar a hr atual:
+/* Como mostrar a hr atual:
 
    var x = new Date()
    var y = x.getHours()

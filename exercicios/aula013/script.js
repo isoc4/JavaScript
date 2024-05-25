@@ -1,4 +1,4 @@
-//2 melhores soluções (Forma eficiente de fazer um loop)
+//1. 2 melhores soluções (Forma eficiente de fazer um loop)
 
 var cont = 1
 
@@ -16,7 +16,7 @@ do{
 
 
 
-//Pior solução (Forma não eficiente de fazer um loop)
+//2. Pior solução (Forma não eficiente de fazer um loop)
 
 /*
 console.log('Hello World! (Passo 1)')

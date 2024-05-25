@@ -34,7 +34,7 @@
             var p = window.document.getElementById('pais')
             var pstring = String(p.value)
             var res = window.document.getElementById('respais')
-            if (pstring != 'Brasil') {
+            if (pstring != 'Brasil') { //Condição composta
                 res.innerHTML = `<p id="resultado">Você é gringo! Você é lá da(o) <strong>${pstring}</strong></p>`
             } else {
                 res.innerHTML = '<p id="resultado">Você é brasileiro! É aqui do <strong>Brasil</strong></p>'

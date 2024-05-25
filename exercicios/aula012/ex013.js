@@ -13,7 +13,7 @@ var ds = a.getDay()
 
 console.log(`Hoje é o dia ${ds} da semana!`)
 
-switch(ds) {
+switch(ds) {//Condição Múltipa
     case 0:
         console.log('Ou Domingo')
         break

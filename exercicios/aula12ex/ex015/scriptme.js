@@ -12,6 +12,7 @@ function verificar(){
         var idade = ano - Number(forano.value)
         var forsex = document.getElementsByName("sex")
         var genero = ''
+        //createElement é utilizado para criar um elemento HTML
         var img = document.createElement ('img')
         img.setAttribute('id', 'imagem')
 
