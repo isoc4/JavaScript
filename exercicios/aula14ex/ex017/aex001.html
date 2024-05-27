@@ -4,24 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modelo de Exercício</title>
-    <link rel="stylesheet" href="styleme.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>...</h1>
+        <h1>Tabuada e Divisão</h1>
     </header>
     <section>
-        <div id="">
-
+        <h2>Tabuada &#x1F9EE; &darr;</h2>
+        <div id="form">
+            <div>
+                Número:
+                <input type="number" name="num" id="inumt">
+            </div>
+            <input type="button" value="Confirmar" onclick="exibirTabuada()">
         </div>
-        <div id="">
-
+        <div id="res">
+            <select name="tabuada" id="itabuada" size="10">
+                <option value="">Digite um número</option>
+            </select>
+        </div>
+        <h2>Divisão &#x1F9EE; &darr;</h2>
+        <div id="form">
+            <div>
+                Número:
+                <input type="number" name="num" id="inumd">
+            </div>
+            <input type="button" value="Confirmar" onclick="exibirDivisao()">
+        </div>
+        <div id="res">
+            <select name="divisao" id="idivisao" size="10">
+                <option value="">Digite um número</option>
+            </select>
         </div>
     </section>
     <footer>
         <h2>&copy; Curso em Vídeo (Isis Maria)</h2>
     </footer>
 
-    <script src="scriptme.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

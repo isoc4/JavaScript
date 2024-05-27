@@ -5,27 +5,24 @@ function contar(){
     var resul = document.getElementById('res')
 
     if (numeroInicial.value.length == 0 || numeroFinal.value.length == 0 || ordemContagem.value.length == 0){
-        window.alert('[ERRO] Tente novamente')
-    } else{
-        resul.innerHTML = 'Contando...<br>'
+        alert('[ERRO] verifique os dados inseridos.')
+    } else {
         var nI = Number(numeroInicial.value)
         var nF = Number(numeroFinal.value)
         var oC = Number(ordemContagem.value)
 
-        if (oC <= 0){
-            alert('OPS: Ordem de contagem inválida, Mudando o ordem de contagem para 1...')
-            var oC = 1
+        if (oC == 0){
+            alert('[INVÁLIDO] alterando a ordem de contagem para 1.')
+            oC = 1
         }
 
-        if (nI < nF){
-            //Contagem crescente
+        if (nI <= nF){
             for (var contar = nI; contar <= nF; contar += oC){
-                resul.innerHTML += `<strong>${contar}</strong>\u{27A1} \u{FE0F}`
+                resul.innerHTML += `${contar} \u{1F449} `
             }
-        } else{
-            //Contagem decrescente
-            for(var contar = nI; contar >= nF; contar -= oC){
-                resul.innerHTML += `<strong>${contar}</strong>\u{27A1} \u{FE0F}`
+        } else if (nI >= nF){
+            for (var contar = nI; contar >= nF; contar -= oC){
+                resul.innerHTML += `${contar} \u{1F449} `
             }
         }
         resul.innerHTML += `\u{1F3C1}`
