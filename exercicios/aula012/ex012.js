@@ -1,7 +1,7 @@
 var hagora = new Date()
 var h = hagora.getHours()
 console.log(`Agora são ${h} horas.`)
-if (h < 6) {
+if (h < 6) { //Condição aninhada
     console.log('Boa madrugada')
 } else if (h <= 12) {
     console.log('Bom dia!')
