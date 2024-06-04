@@ -22,8 +22,16 @@ section{
     box-shadow: 4px 4px 8px rgba(37, 55, 88, 0.582);
 }
 
+select{
+    width: 30%;
+}
+
 footer{
     text-align: center;
     font-size: 0.7em;
     padding: 10px;
+}
+
+#botaofinalizar{
+    display: block;
 }
