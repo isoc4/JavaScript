@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ano</title>
+    <style>
+        body{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        button{
+            width: 200px;
+            height: 90px;
+        }
+
+        button:hover{
+            cursor: pointer;
+            background-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mudança de preço</h1>
+    <button type="button" onclick="verDiferenca()">Verificar</button>
+    <p>Clique no botão e informe o que for pedido.</p>
+
+    <h2 id="th2"></h2>
+    <div id="res">
+
+    </div>
+
+    <script>
+        function verDiferenca(){
+            var precoAnterior = window.prompt('Informe o valor do preço anterior.')
+            var precoAtual = window.prompt('Informe o valor atual do preço.')
+            var h2 = document.getElementById('th2')
+            var resul = document.getElementById('res')
+
+            var pAnterior = Number(precoAnterior.value)
+            var pAtual = Number(precoAtual.value)
+
+            if (precoAnterior == 0 && precoAtual == 0){
+                h2.innerHTML = '[ERRO] Informe os preços!!!'
+                h2.style.background = 'rgba(255, 0, 0, 0.562)'
+            } else if (pAnterior < pAtual){
+                //Mais barato
+                alert('BARATO')
+            } else {
+                //Mais caro
+                alert('CARO')
+            }
+        }
+    </script>
+</body>
+</html>
