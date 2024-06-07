@@ -1,0 +1,19 @@
+
+Na função "inLista"(dentrodaLista) diz, que se o número que foi adicionado na lista estiver na lista ele não vai ser adicionado, caso ele esteja ele vai ser adicionado.
+
+    Traduzindo código:
+        se (o index da lista(que possui o Numero(num)) for diferente de não encontrado){
+            retornar verdade(o número está na lista)
+        } else {
+            retornar falso(o número não está na lista)
+        }
+
+
+Na função "isNumero"(éumNúmeroválido) diz, que se o número for maior ou igual a um e o número for menor ou igual a 100 ele é um número valido, caso não, ele não é um número válido
+
+    Traduzindo código:
+        se ((o número) for maior ou igual 1 a um EE (o número) for menor ou igual a 100){
+            retornar verdade(ele é válido)
+        } else {
+            retornar falso(ele não é válido)
+        }

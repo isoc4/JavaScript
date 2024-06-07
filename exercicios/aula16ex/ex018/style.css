@@ -17,13 +17,13 @@ section{
     color: black;
     border-radius: 30px;
     width: 60%;
-    height: 400px;
+    height: 60vh;
     padding: 10px;
     box-shadow: 4px 4px 8px rgba(37, 55, 88, 0.582);
 }
 
 select{
-    width: 30%;
+    width: 60%;
 }
 
 footer{
@@ -34,4 +34,8 @@ footer{
 
 #botaofinalizar{
     display: block;
+}
+
+#badicionar{
+    margin-bottom: 15px;
 }

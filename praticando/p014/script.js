@@ -7,8 +7,8 @@ function fatorial(){
     } else {
         var n = Number(numero.value)
 
-        for (var fatorial = 1; fatorial <= n; fatorial++){
-            resul.innerHTML += `${fatorial} X ${fatorial - 1}`
+        for (var contador = 1; contador <= n; contador--){
+            resul.innerHTML += `${n} X ${contador} = ${n * contador}`
         }
     }
 }
