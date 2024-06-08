@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: cornflowerblue;
+    color: white;
+}
+
+header{
+    text-align: center;
+    padding: 20px;
+}
+
+section{
+    margin: auto;
+    background-color: rgba(35, 66, 112, 0.199);
+    color: black;
+    border-radius: 30px;
+    width: 60%;
+    max-height: 600px;
+    padding: 10px;
+    box-shadow: 4px 4px 8px rgba(37, 55, 88, 0.582);
+}
+
+#res{
+    margin: auto;
+    background-color: #b2c6eb;
+    width: 80%;
+    height: 90px;
+    border-radius: 10px;
+}
+
+ul{
+    columns: 3;
+    list-style-type: none;
+}
+
+ul > li > input{
+    background-color: lightcoral;
+    border: none;
+    border-radius: 40%;
+    width: 50px;
+    height: 50px;
+    margin: 11px;
+}
+
+ul > li > input:hover{
+    cursor: pointer;
+    background-color: rgba(189, 102, 102, 0.644);
+}
+
+#boperadores{
+    background-color: rgb(162, 235, 162);
+}
+
+#boperadores:hover{
+    cursor: pointer;
+    background-color: rgb(162, 235, 162, 0.644);
+}
+
+footer{
+    text-align: center;
+    font-size: 0.7em;
+    padding: 10px;
+}
+
+@media screen and (min-width: 685px){
+    section{
+        width: 401px;
+    }
+}
+
+@media screen and (max-width: 685px){
+    
+}
