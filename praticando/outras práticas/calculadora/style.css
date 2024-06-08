@@ -30,6 +30,15 @@ section{
     border-radius: 10px;
 }
 
+#resh2{
+    overflow-x: scroll;
+    text-align: center;
+}
+
+#resh2::-webkit-scrollbar{
+    display: none;
+}
+
 ul{
     columns: 3;
     list-style-type: none;
@@ -73,3 +82,16 @@ footer{
 @media screen and (max-width: 685px){
     
 }
+
+/* 
+var zero = document.getElementById('i0')
+var um = document.getElementById('i1')
+var dois = document.getElementById('i2')
+var tres = document.getElementById('i3')
+var quatro = document.getElementById('i4')
+var cinco = document.getElementById('i5')
+var seis = document.getElementById('i6')
+var sete = document.getElementById('i7')
+var oito = document.getElementById('i8')
+var nove = document.getElementById('i9')
+*/
