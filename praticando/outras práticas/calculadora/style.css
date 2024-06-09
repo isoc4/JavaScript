@@ -26,17 +26,26 @@ section{
     margin: auto;
     background-color: #b2c6eb;
     width: 80%;
-    height: 90px;
+    height: 60px;
     border-radius: 10px;
 }
 
-#resh2{
-    overflow-x: scroll;
-    text-align: center;
+#saida{
+    cursor: text;
+    font-size: 2em;
+    background: none;
+    border: none;
+    margin: auto;
+    width: 98%;
+    height: 60px;
 }
 
-#resh2::-webkit-scrollbar{
-    display: none;
+#iigual{
+    margin-top: 8px;
+    border: none;
+    width: 60px;
+    border-radius: 10px;
+    padding: 8px;
 }
 
 ul{
@@ -58,11 +67,11 @@ ul > li > input:hover{
     background-color: rgba(189, 102, 102, 0.644);
 }
 
-#boperadores{
+.boperadores{
     background-color: rgb(162, 235, 162);
 }
 
-#boperadores:hover{
+.boperadores:hover{
     cursor: pointer;
     background-color: rgb(162, 235, 162, 0.644);
 }

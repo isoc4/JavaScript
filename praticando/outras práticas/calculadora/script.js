@@ -1,12 +1,21 @@
-let resul = document.getElementById('resh2')
+const saida = document.getElementById('saida')
 
-function digitarZero(){resul.innerHTML += 0}
-function digitarUm(){resul.innerHTML += 1}
-function digitarDois(){resul.innerHTML += 2}
-function digitarTres(){resul.innerHTML += 3}
-function digitarQuatro(){resul.innerHTML += 4}
-function digitarCinco(){resul.innerHTML += 5}
-function digitarSeis(){resul.innerHTML += 6}
-function digitarSete(){resul.innerHTML += 7}
-function digitarOito(){resul.innerHTML += 8}
-function digitarNove(){resul.innerHTML += 9}
+function limpar(){ //Limpa a saída
+    saida.value = ''
+}
+
+function addSaida(valor){ //adiciona os valores na saída
+    saida.value += valor
+}
+
+function calcular(){
+    if (saida.value.length == 0){
+        alert('[ERRO]')
+    } else {
+        saida.value = eval(saida.value)
+    }
+    /*
+        Quando clicado no botão que executa a function "calcular",
+        o bloco de código em else executa o argumento que estiver no valor da saída.
+    */
+}
