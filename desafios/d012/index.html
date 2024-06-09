@@ -22,35 +22,47 @@
 </head>
 <body>
     <h1>Mudança de preço</h1>
-    <button type="button" onclick="verDiferenca()">Verificar</button>
+    <button type="button" onclick="subtracao(preco1, preco2)" onclick="analisar(preco1, preco2)">Verificar</button>
     <p>Clique no botão e informe o que for pedido.</p>
 
-    <h2 id="th2"></h2>
     <div id="res">
 
     </div>
 
     <script>
-        function verDiferenca(){
-            var precoAnterior = window.prompt('Informe o valor do preço anterior.')
-            var precoAtual = window.prompt('Informe o valor atual do preço.')
-            var h2 = document.getElementById('th2')
+        function analisar(pAN=0, pAT=0){
+            var preco1 = window.prompt('Informe o valor do preço anterior.')
+            var preco2 = window.prompt('Informe o valor atual do preço.')
             var resul = document.getElementById('res')
 
-            var pAnterior = Number(precoAnterior.value)
-            var pAtual = Number(precoAtual.value)
+            resul.innerHTML = ''
 
-            if (precoAnterior == 0 && precoAtual == 0){
-                h2.innerHTML = '[ERRO] Informe os preços!!!'
-                h2.style.background = 'rgba(255, 0, 0, 0.562)'
-            } else if (pAnterior < pAtual){
-                //Mais barato
-                alert('BARATO')
+            if (pAN < pAT){ //MAIS CARO
+                resul.innerHTML = `<h2>Analizando os preços ${pAN} e ${pAT}.</h2>`
+
+                resul.innerHTML += `<p>O produto custava R$${pAN} e atualmente custa R${pAT}.</p>`
+                resul.innerHTML += `<p>Atualmente o produto está mais caro!</p>`
+                resul.innerHTMl += `<p>O produto subiu R$${pAT - pAN}</p>`
+            } else if (pAN > pAT){ //MAIS BARATO
+                resul.innerHTML += `<h2>Analizando os preços ${pAN} e ${pAT}</h2>`
+                
+                resul.innerHTML += `<p>O produto custava R$${pAN} e atualmente custa R$${pAT}</p>`
+                resul.innerHTML += `<p>Atualmente o produto está mais barato!</p>`
+
             } else {
-                //Mais caro
-                alert('CARO')
+                alert(`[ERRO]`)
             }
+
+            
         }
+
+        function subtracao(pAN=0, pAT=0){
+                if (pAN < pAT){
+                    return pAT - pAN
+                } else {
+                    return pAN - pAT
+                }
+            }
     </script>
 </body>
 </html>
