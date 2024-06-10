@@ -33,11 +33,12 @@ section{
 #saida{
     cursor: text;
     font-size: 2em;
-    background: none;
+    background: transparent;
     border: none;
     margin: auto;
     width: 98%;
     height: 60px;
+    border-radius: 10px;
 }
 
 #iigual{
@@ -49,6 +50,7 @@ section{
 }
 
 ul{
+    margin-left: -30px;
     columns: 3;
     list-style-type: none;
 }
@@ -56,8 +58,8 @@ ul{
 ul > li > input{
     background-color: lightcoral;
     border: none;
-    border-radius: 40%;
-    width: 50px;
+    border-radius: 10px;
+    width: 60%;
     height: 50px;
     margin: 11px;
 }
@@ -87,20 +89,3 @@ footer{
         width: 401px;
     }
 }
-
-@media screen and (max-width: 685px){
-    
-}
-
-/* 
-var zero = document.getElementById('i0')
-var um = document.getElementById('i1')
-var dois = document.getElementById('i2')
-var tres = document.getElementById('i3')
-var quatro = document.getElementById('i4')
-var cinco = document.getElementById('i5')
-var seis = document.getElementById('i6')
-var sete = document.getElementById('i7')
-var oito = document.getElementById('i8')
-var nove = document.getElementById('i9')
-*/

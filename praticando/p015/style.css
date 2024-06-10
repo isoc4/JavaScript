@@ -22,7 +22,7 @@ section{
     border-radius: 10px;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.733);
     background-color: rgb(98, 123, 131);
-    width: 50%;
+    min-width: 284px;
     height: 400px;
 }
 

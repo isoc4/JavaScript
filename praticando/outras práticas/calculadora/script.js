@@ -1,15 +1,16 @@
 const saida = document.getElementById('saida')
 
-function limpar(){ //Limpa a saída
+function limpar(){ // Limpa a saida
     saida.value = ''
 }
 
-function addSaida(valor){ //adiciona os valores na saída
+function  addSaida(valor){ // Adiciona os valores digitados na saida
     saida.value += valor
 }
 
 function calcular(){
-    if (saida.value.length == 0){
+
+    if(saida.value.length == 0){
         alert('[ERRO]')
     } else {
         saida.value = eval(saida.value)
