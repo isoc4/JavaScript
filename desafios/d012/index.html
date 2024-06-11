@@ -22,7 +22,7 @@
 </head>
 <body>
     <h1>Mudança de preço</h1>
-    <button type="button" onclick="analisar(window.prompt('Informe o valor do preço anterior.'), window.prompt('Informe o valor atual do preço.'))">Verificar</button>
+    <button type="button" onclick="analisar(window.prompt('Informe o valor do preço anterior: (informe um valor menor que 1.000,00)'), window.prompt('Informe o valor atual do preço: (informe um valor menor que 1.000,00)'))">Verificar</button>
     <p>Clique no botão e informe o que for pedido.</p>
 
     <div id="res">
@@ -31,38 +31,31 @@
 
     <script>
         function analisar(pAN=0, pAT=0){
-            var preco1 = window.prompt('Informe o valor do preço anterior.')
-            var preco2 = window.prompt('Informe o valor atual do preço.')
-            var resul = document.getElementById('res')
+            const resul = document.getElementById('res')
+            let precoAntigo = Number(pAN)
+            let precoAtual = Number(pAT)
+            let calcularPreco = Math.abs(precoAntigo - precoAtual)
+            let porcentagem = 0
 
             resul.innerHTML = ''
 
+            resul.innerHTML = `<h2>Analizando os preços.</h2>`
+            resul.innerHTML += `<p>O produto custava ${precoAntigo.toLocaleString('PT-BR', {style: 'currency', currency: 'BRL'})} e atualmente custa ${precoAtual.toLocaleString('PT-BR', {style: 'currency', currency: 'BRL'})}.</p>`
+
             if (pAN < pAT){ //MAIS CARO
-                resul.innerHTML = `<h2>Analizando os preços ${pAN} e ${pAT}.</h2>`
+                porcentagem = Math.abs(((precoAntigo / precoAtual) -1) * 100).toFixed(2)
 
-                resul.innerHTML += `<p>O produto custava R$${pAN} e atualmente custa R${pAT}.</p>`
                 resul.innerHTML += `<p>Atualmente o produto está mais caro!</p>`
-                resul.innerHTMl += `<p>O produto subiu R$${pAT - pAN}</p>`
-            } else if (pAN > pAT){ //MAIS BARATO
-                resul.innerHTML += `<h2>Analizando os preços ${pAN} e ${pAT}</h2>`
-                
-                resul.innerHTML += `<p>O produto custava R$${pAN} e atualmente custa R$${pAT}</p>`
+                resul.innerHTML += `<p>O produto subiu ${calcularPreco.toLocaleString('PT-BR', {style: 'currency', currency: 'BRL'})} em relação ao preço antigo.</p>`
+                resul.innerHTML += `<p>Uma variação a partir de ${porcentagem}% pra cima.</p>`
+            } else{ //MAIS BARATO
+                porcentagem = Math.abs(((precoAtual / precoAntigo) -1) * 100).toFixed(2)
+
                 resul.innerHTML += `<p>Atualmente o produto está mais barato!</p>`
-
-            } else {
-                alert(`[ERRO]`)
+                resul.innerHTML += `<p>O produto desceu ${calcularPreco.toLocaleString('PT-BR', {style: 'currency', currency: 'BRL'})} em relação ao preço antigo.</p>`
+                resul.innerHTML += `<p>Uma variação a partir de ${porcentagem}% pra baixo.</p>`
             }
-
-            
         }
-
-        function subtracao(pAN=0, pAT=0){
-                if (pAN < pAT){
-                    return pAT - pAN
-                } else {
-                    return pAN - pAT
-                }
-            }
     </script>
 </body>
 </html>
