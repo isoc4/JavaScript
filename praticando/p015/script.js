@@ -1,6 +1,5 @@
 function carregar(){
-    var data = new Date()
-    var diaAtual = data.getDay()
+    var data = (new Date()).getDay()
     
     var titulo = document.getElementById('dia')
     var imagem = document.getElementById('imagemdia')
@@ -17,7 +16,7 @@ function carregar(){
     6 Sábado
     */
 
-    switch (diaAtual){
+    switch (data){
         case 0:
             titulo.innerHTML = 'Hoje é Domingo!'
             imagem.src = 'imagem/domingo.jpg'
