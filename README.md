@@ -15,6 +15,6 @@ Desafios:
     <li><a href="https://isoc4.github.io/JavaScript/desafios/d009">Desafio009</a></li>
     <li><a href="https://isoc4.github.io/JavaScript/desafios/d010">Desafio010</a></li>
     <li><a href="https://isoc4.github.io/JavaScript/desafios/d011">Desafio011</a></li>
-    <li><a href=""></a></li>
-    <li><a href=""></a></li>
+    <li><a href="https://isoc4.github.io/JavaScript/desafios/d012">Desafio012</a></li>
+    <li><a href="https://isoc4.github.io/JavaScript/desafios/d013">Desafio013</a></li>
 </ul>
