@@ -6,8 +6,13 @@
     <title>Praticando Operador &&</title>
     <style>
         body{
-            background-color: palegoldenrod;
+            background-color: black;
             color: cornflowerblue;
+        }
+
+        main{
+            margin-left: 10%;
+            margin-right: 10%;
         }
 
         h1{
@@ -15,15 +20,35 @@
             text-shadow: 1px 1px 2px rgba(68, 67, 49, 0.829);
         }
 
-        img{
-            width: 120px;
+        .objetos{
+            width: 50px;
+            height: 50px;
+            border: 2px solid white;
+            text-align: center;
+            line-height: 50px;
         }
 
         #lampada{
-            position: absolute;
-            top: 20%;
-            left: 50%;
-            transform: translate(-50%, 0%);
+            margin: auto;
+        }
+
+        #carga, #bc{
+            margin: 10px;
+            float: left;
+        }
+
+        #carga p, #bateria p{
+            line-height: normal;
+            width: 110px;
+        }
+
+        #bateria, #bb{
+            margin: 10px;
+            float: right;
+        }
+
+        #bc, #bb{
+            cursor: pointer;
         }
     </style>
 </head>
@@ -31,7 +56,23 @@
     <main>
         <h1>Acenda a Lâmpada</h1>
 
-        <img id="lampada" src="image/light-bulb-off.png" alt="">
+        <div id="caixaLampada">
+            <div class="objetos" id="lampada">L</div>
+            <p style="text-align: center;">Acenda a luz.</p>
+        </div>
+        <div>
+            <div class="objetos" id="carga">C
+                <p>A carga esta conectada? <strong>NÃO</strong></p>
+            </div>
+            <input type="button" value="Conectar" id="bc" onclick="estaConectado">
+
+            <div class="objetos" id="bateria">B
+                <p>A batria esta carregada? <strong>NÃO</strong></p>
+            </div>
+            <button id="bb">Carregar</button>
+        </div>
     </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
